@@ -13,7 +13,7 @@ export const Heading = () => {
     return (
       <Navbar  color="dark" dark>
        <Container>
-           <NavbarBrand href="/">my Team</NavbarBrand>
+           <NavbarBrand href="/">MY TEAM</NavbarBrand>
            <Nav>
             <Link className="btn btn-primary" to="/add"> Add User</Link>
             </Nav>
