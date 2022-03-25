@@ -8,7 +8,7 @@ import {
 } from 'reactstrap';
 
 export const UserList = () => {
-  const { users } = useContext(GlobalContext);
+  const { users, removeUser } = useContext(GlobalContext);
   return (
     <ListGroup className="mt-4">
       {users.map(user => (
@@ -16,7 +16,7 @@ export const UserList = () => {
               <strong>{user.name}</strong> 
              <div className="ml-auto"> 
              <Link to={`/edit${user.id}`} color="warning" className="btn btn-warning mr-1">Edit</Link>
-              <Button color="danger">Delete</Button>
+              <Button onClick={() => removeUser(user.id)} color="danger">Delete</Button>
              </div>
             </ListGroupItem>
       ))}
