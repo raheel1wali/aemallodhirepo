@@ -11,11 +11,13 @@ import {
 
 export const Heading = () => {
     return (
-      <Navbar  color="dark" dark>
+      <Navbar color="dark" dark>
        <Container>
            <NavbarBrand href="/">MY TEAM</NavbarBrand>
            <Nav>
+            <NavItem>
             <Link className="btn btn-primary" to="/add"> Add User</Link>
+            </NavItem>
             </Nav>
        </Container>
        </Navbar>
