@@ -3,11 +3,8 @@ import AppReducer from './AppReducer';
 
 //Initial State
 const initialState = {
-    users: [
-        {id: 1, name:'User One'},
-        {id: 1, name:'User Two'},
-        {id: 1, name:'User Three'}
-    ]
+    usersId: '',
+    users: []
 };
 
 // Create Context
@@ -19,6 +16,7 @@ export const GlobalProvider= ({children}) => {
 
 // Actions
 const removeUser = (id) => {
+    // console.log(id)
     dispatch({
         type: 'REMOVE_USER',
         payload: id
@@ -26,9 +24,25 @@ const removeUser = (id) => {
 }
 
 const addUser = (user) => {
+    // console.log('>>',user)
     dispatch({
         type: 'ADD_USER',
         payload: user
+    })
+}
+
+const editUser =(user) => {
+    console.log(user)
+    dispatch({
+        type: 'EDIT_USER',
+        payload: user
+    })
+}
+
+const getId =(id) => {
+    dispatch({
+        type: 'GET_ID',
+        payload: id
     })
 }
 
@@ -37,7 +51,9 @@ const addUser = (user) => {
         <GlobalContext.Provider value={{
             users: state.users,
             removeUser,
-            addUser
+            addUser,
+            editUser,
+            getId
         }}>
             {children}
         </GlobalContext.Provider>

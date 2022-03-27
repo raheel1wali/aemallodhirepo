@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import {Home} from './components/Home';
 import {AddUser} from './components/AddUser';
 import {EditUser} from './components/EditUser';
+
 import {GlobalProvider} from './context/GlobalState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,7 +13,7 @@ function App() {
       <GlobalProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/edit1" element={<EditUser />} />
+        <Route path="/edit/:id" element={<EditUser />} />
         <Route path="/add" element={<AddUser />} />
       </Routes>
       </GlobalProvider>

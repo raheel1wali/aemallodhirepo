@@ -9,17 +9,28 @@ import {
 
 export const UserList = () => {
   const { users, removeUser } = useContext(GlobalContext);
+  console.log(users)
   return (
     <ListGroup className="mt-4">
-      {users.map(user => (
-              <ListGroupItem className="d-flex">
+    {users.length > 0 ? (
+      <>
+      {users.map((user) => (
+        // console.log(user)
+
+              <ListGroupItem className="d-flex" key={user.id}>
               <strong>{user.name}</strong> 
              <div className="ml-auto"> 
-             <Link to={`/edit${user.id}`} color="warning" className="btn btn-warning mr-1">Edit</Link>
+             {/* <Link to={`/edit`} color="warning" className="btn btn-warning mr-1">Edit</Link> */}
+             <Link to={`/edit/${user.id}`} color="warning" className="btn btn-warning mr-1">Edit</Link>
               <Button onClick={() => removeUser(user.id)} color="danger">Delete</Button>
              </div>
             </ListGroupItem>
       ))}
+      </>
+     ) : (
+      <h4 className="text-center">No User</h4>
+    )} 
+
       </ListGroup>
   )
 }
