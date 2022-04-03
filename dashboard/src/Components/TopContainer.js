@@ -10,10 +10,12 @@ function TopContainer() {
         const menuContainer = document.getElementById("menuContainer");
 
         menuTarget.addEventListener("mouseenter", () =>{
+            menuTarget.style.transform = "rotate(180deg)";
             menuContainer.style.transform ="translateX(0px)";
         });
 
         menuContainer.addEventListener("mouseleave", () =>{
+            menuTarget.style.transform = "rotate(0deg)";
             menuContainer.style.transform ="translateX(300px)";
         });
     }, [])
