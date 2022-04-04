@@ -10,11 +10,13 @@ function MainRightBottom() {
         </div>
 
         {TopSeller && TopSeller.map((seller) =>
-                <div className="topSeller" key={seller.id}>
-                <div className="topSellerImg"></div>
+                <div className="topSeller" key={seller?.id}>
+                <div className="topSellerImg">
+                  <img src={seller?.imgSrc} alt=""/>
+                </div>
       
                 <p className="topSellerName">
-                  {seller.seller_name} <span>@sample</span>
+                  {seller?.seller_name} <span>{seller?.username}</span>
                 </p>
       
                 <a href="#" className="button1 btn">

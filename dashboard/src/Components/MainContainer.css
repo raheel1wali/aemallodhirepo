@@ -275,4 +275,11 @@
     margin-left: auto;
 }
 
+@media screen and (max-width : 525px) {
+    .mainContainer{
+        flex-direction: column;
+        
+    }
+}
+
 
