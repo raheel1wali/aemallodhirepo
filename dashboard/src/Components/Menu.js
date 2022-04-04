@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import './Menu.css';
-import Logo from '../img/logo.png';
+import React, { useEffect } from "react";
+import "./Menu.css";
+import Logo from "../img/logo.png";
 import { FaDelicious, 
     FaShoppingCart, 
     FaWallet, 
@@ -13,22 +13,22 @@ function Menu() {
     useEffect(() =>{
 
         const mainMenuLi = document
-        .getElementById('mainMenu')
-        .querySelectorAll('li');
+        .getElementById("mainMenu")
+        .querySelectorAll("li");
 
         function changeActive() {
             mainMenuLi.forEach(n => n.classList.remove("active"));
             this.classList.add("active");
         }
         
-        mainMenuLi.forEach( n => n.addEventListener('click', changeActive))
+        mainMenuLi.forEach( n => n.addEventListener("click", changeActive))
     }, []);
 
   return (
       <menu>
           <img src={Logo} alt="" />
 
-          <ul id='mainMenu'>
+          <ul id="mainMenu">
           <Icon icon={<FaDelicious />}/>
             <Icon icon={<FaShoppingCart />}/>
             <Icon icon={<FaWallet />}/>
@@ -49,4 +49,5 @@ const Icon = ({ icon }) => (
         <a href="#">{icon}</a>
     </li>
 ); 
-export default Menu
+
+export default Menu;

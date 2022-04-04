@@ -30,10 +30,10 @@ function CardMain({imgSrc, title, hearts}) {
         </div>
 
         <div className="card_button">
-          <a href="#" className="button1">
+          <a href="#" className="button1 btn">
             Place a Bid
             </a>
-          <a href="#" className="button2">
+          <a href="#" className="button2 btn">
             History
             </a>
         </div>

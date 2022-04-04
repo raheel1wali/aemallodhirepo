@@ -147,11 +147,94 @@
 
 .mainContainer .left .cards main .card_main .stats{
     columns: 2;
+    column-rule: 1px solid #adabb8;
     text-align: center;
     gap: 1em;
+    margin: 15px 0;
+}
+
+.mainContainer .left .cards main .card_main .stats p{
+    color: #adabb8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.mainContainer .left .cards main .card_main .stats p span{
+    display: block;
+    color: #b1147d;
+    font-size: 12px;
+}
+
+.mainContainer .left .cards main .card_main .card_button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.mainContainer .left .cards main .card_main .card_button .btn{
+    font-size: 10px !important;
 }
 
 .mainContainer .right{
     width: calc(100% - 70%);
+    padding: 0px 10px;
+    padding-left: 20px;
+    transition: all 0.3s cubic-bezier(0.17, 0.81, 0.38, 1.39);  
 }
 
+.mainContainer .right .topCard,
+.mainContainer .right .bottomRightCard{
+    background: #19162c;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+}
+
+.mainContainer .right .topCard .topCard_name,
+.mainContainer .right .bottomRightCard .bottomName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainContainer .right .topCard .topCard_name h2, 
+.mainContainer .right .bottomRightCard .bottomName h2{
+    color: #d1d0d5;
+}
+
+.mainContainer .right .topCard .topCard_name a,
+.mainContainer .right .bottomRightCard .bottomName a {
+    color: #b1147d;
+}
+
+.mainContainer .right .topCard .earning{
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.mainContainer .right .topCard .earning p{
+    margin: 8px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #adabb8;
+}
+
+.mainContainer .right .topCard .earning p:nth-child(odd){
+    background: #211d3a;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mainContainer .right .topCard .earning p:last-child span{
+    font-size: 14px;
+    color: #b1147d;
+}
+
+.mainContainer .right .bottomRightCard{
+    margin-top: 15px;
+}
