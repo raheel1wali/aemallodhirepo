@@ -278,7 +278,47 @@
 @media screen and (max-width : 525px) {
     .mainContainer{
         flex-direction: column;
-        
+        height: auto;
+    }
+
+    .mainContainer .left{
+        width: 100%;
+    }
+
+    .mainContainer .left .banner .textContainer h1{
+        font-size: 2.5em;
+    }
+
+    .mainContainer .left .banner .textContainer h2{
+        font-size: 1.75em;
+    }
+
+    .mainContainer .left .cards .filters .filters_buttons{
+        display: none;
+    }
+    
+    .mainContainer .left .cards main .card_main{
+        max-width: 350px;
+    }
+
+    .mainContainer .right{
+        width: 100%;
+        padding: unset;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 525px) and (max-width : 950px) {
+    .mainContainer{
+        height: calc(100% - 25px);
+    }
+
+    .mainContainer .left{
+        width: calc(100% - 30%);
+    }
+
+    .mainContainer .right{
+        width: calc(100% - 60%);
     }
 }
 
