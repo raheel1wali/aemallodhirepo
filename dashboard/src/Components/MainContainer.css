@@ -320,6 +320,24 @@
     .mainContainer .right{
         width: calc(100% - 60%);
     }
+
+    .mainContainer .left .cards main .card_main{
+        max-width: 230px;
+        margin: 20px 5px;
+    }
+
+    .mainContainer .left .cards .filters{
+        padding: 0;
+    }
+
+    .mainContainer .right .topCard .earning {
+        padding: 0;
+    }
+
+    .mainContainer .right .bottomRightCard .topSeller .topSellerImg{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 
